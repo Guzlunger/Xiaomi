@@ -1,0 +1,367 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+li {
+  padding-left: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+$black: #131313;
+$white: #FFFFFF;
+$grey: #6F6F6F;
+$red: #FF4040;
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu {
+    margin-right: 70px;
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin-top: 42px;
+    }
+    &__item + .menu__item{
+      padding-left: 10px;
+    }
+    &__link {
+      text-transform: uppercase;
+      padding: 43px 20px;
+      font-family: 'Inter';
+      font-size: 14px;
+      color: $black;
+      transition: all .3s;
+    }
+    &__link:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.bike {
+  padding: 100px 0 150px;
+  .bike__inner {
+    display: flex;
+    justify-content: space-between;
+    .bike__column {
+      .bike__title {
+        margin: 60px 0 5px;
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 77px;
+        color: #131313;
+      }
+      .bile__subtitle {
+        font-family: 'Inter';
+        font-weight: 400;
+        margin: 5px 0 60px;
+        font-size: 32px;
+        line-height: 39px;
+        color: $grey;
+      }
+      .bike__text {
+        font-family: 'Inter';
+        font-size: 14px;
+        line-height: 120%;
+        color: $black;
+        max-width: 420px;
+        margin-bottom: 20px;
+      }
+      .bike__link {
+        font-family: 'Inter';
+        margin-top: 80px;
+        display: block;
+        padding: 28px 81px;
+        font-size: 20px;
+        letter-spacing: 1.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        width: 420px;
+        height: 80px;
+        background: $black;
+        transition: all 0.4s;
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+  .bike__column-slider {
+    flex-basis: 630px;
+    margin-left: 30px;
+    max-width: 630px;
+    .bike__slider {
+      .slick-dots {
+        position: absolute;
+        top: 52px;
+        right: 0;
+        li + li{
+          padding-top: 10px;
+        }
+        button {
+          font-size: 0;
+          padding: 0;
+          border: none;
+          width: 2px;
+          height: 25px;
+          background-color:$black;
+          border-radius: 7px;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background-color: $red;
+          }
+        }
+        .slick-active button{
+          background-color: $red;
+        }
+      }
+    }
+    .bike__list {
+      display: flex;
+      margin-top: 25px;
+      justify-content: space-around;
+      &-item {
+        min-width: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 58px;
+        .bike__list-num {
+          font-family: 'Inter';
+          font-weight: 700;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: $black;
+        }
+        .bike__list-text {
+          font-family: 'Inter';
+          font-size: 12px;
+          line-height: 15px;
+          text-transform: lowercase;
+          color: $black;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}
+.info {
+  .info__inner {
+    display: flex;
+    .info__img {
+      margin-right: 60px;
+      flex-basis: 570px;
+    }
+    .info__list {
+      flex-basis: 492px;
+      .info__item {
+        .info__item-title {
+          font-family: 'Inter';
+          margin: 0;
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: $black;
+        }
+        .info__item-text {
+          margin-top: 10px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $black;
+          max-width: 450px;
+        }
+        &+ .info__item {
+          padding-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+.characteristics {
+  margin: 150px auto;
+  .container {
+    display: flex;
+  }
+  .characteristics__column {
+    min-width: 570px;
+    min-height: 730px;
+    margin-right: 60px;
+    .characteristics__title {
+      font-family: 'Inter';
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: $black;
+    }
+    .characteristics__inner {
+      .characteristics__subtitle {
+        margin: 30px 0 10px;
+        padding-top: 3px;
+        width: 570px;
+        height: 22px;
+        background: $black;
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $white;
+      }
+      .characteristics__list {
+        display: flex;
+        margin-top: 5px;
+        .characteristics__name {
+          flex-basis: 285px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $black;
+        }
+        .characteristics__descr {
+          flex-basis: 285px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          color: $black;
+        }
+      }
+    }
+  }
+  .characteristics__img {
+    align-self: center;
+  }
+}
+.bike-slider {
+  margin-top: 150px;
+  .container {
+    .second-bike-slider {
+      margin-left: 50px;
+      max-height: 632px;
+      .slick-dots {
+        position: absolute;
+        top: 10px;
+        left: -90px;
+        li {
+          padding-top: 10px;
+          button {
+            display: block;
+            padding: 0;
+            font-size: 0;
+            border: 0;
+            width: 2px;
+            height: 25px;
+            background: $black;
+            border-radius: 7px;
+            transition: all 0.3s;
+            &:hover {
+              background-color: $red;
+              cursor: pointer;
+            }
+          }
+        }
+        .slick-active {
+          button {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.order {
+  .container {
+    .order__column {
+      .order__title {
+      }
+      
+      .order__text {
+      }
+      .order__name {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        border: none;
+        color: $grey;
+        outline: 0;
+      }
+      .order__phone {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        border: none;
+        color: $grey;
+        outline: 0;
+      }
+      .order__link {
+        font-family: 'Inter';
+        margin-top: 80px;
+        display: block;
+        padding: 28px 81px;
+        font-size: 20px;
+        letter-spacing: 1.1em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        width: 420px;
+        height: 80px;
+        background: $black;
+        transition: all 0.4s;
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

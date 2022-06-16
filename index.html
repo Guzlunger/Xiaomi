@@ -21,13 +21,13 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">Описание</a>
+              <a class="menu__link" href="#info">Описание</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Характеристики</a>
+              <a class="menu__link" href="#characteristics">Характеристики</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">стоимость</a>
+              <a class="menu__link" href="#price">стоимость</a>
             </li>
           </ul>
         </nav>
@@ -43,7 +43,7 @@
           <h3 class="bile__subtitle">Электрический велосипед</h3>
           <p class="bike__text">Полная свобода передвижения и надежный транспорт для путешествий на любые расстояния</p>            
           <p class="bike__text">HIMO C26 – это новый электровелосипед от Xiaomi, который создан как для езды по городу, так и бездорожью. Он имеет мощный двигатель и емкий аккумулятор, благодаря которым способен проезжать на одном заряде до 100 км, что определенно выше, чем у большинства конкурентов. А большие колеса с пневматическими шинами, дисковые тормоза, 7-скоростная трансмиссия и эргономичное сидение делают каждую поездку гораздо приятнее. </p>
-          <a class="bike__link" href="#">ЗАКАЗАТЬ</a>
+          <a class="bike__link" href="#price">ЗАКАЗАТЬ</a>
         </div>
         <div class="bike__column bike__column-slider">
           <div class="bike__slider">
@@ -75,7 +75,7 @@
     </div>
   </section>
 
-  <section class="info">
+  <section class="info" id="info">
     <div class="container">
       <div class="info__inner">
         <img class="info__img" src="images/bike-and-women.jpg" alt="girl on a bike">
@@ -110,7 +110,7 @@
     </div>
   </section>
 
-  <section class="characteristics">
+  <section class="characteristics" id="characteristics">
     <div class="container">
       <div class="characteristics__column">
         <h4 class="characteristics__title">Характеристики </h4>
@@ -207,20 +207,76 @@
     </div>
   </section>
 
-  <!-- <section class="order">
+  <section class="price" id="price">
     <div class="container">
-      <div class="order__column">
-        <div class="order__title">Заказать</div>
-        <div class="order__text">Если Вы хотите заказать велосипед, оставьте свой контакт и наш менеджер перезвонит вам в ближайшее время</div>
-        <form action="#" method="get">
-          <input class="order__name" type="text" placeholder="имя" name="username">
-          <input class="order__phone" type="tel" placeholder="телефон" name="phone">
-          <a class="order__link" href="">Заказать</a>
+      <div class="price__inner">
+        <form class="form" action="#" method="get">
+          <div class="form__order-column">
+            <h4 class="form__title">Заказать</h4>
+            <div class="form__text">Если Вы хотите заказать велосипед, оставьте свой контакт и наш менеджер перезвонит вам в ближайшее время</div>
+            <input class="form__input-name" type="text" placeholder="имя" name="username">
+            <input class="form__input-phone" type="tel" placeholder="телефон" name="phone">
+            <p class="form__text-color">
+              выберите желаемый цвет
+            </p>
+          </div>
+          <div class="form__label-box">
+            <label class="form__label">
+              <input class="form__input-radio" type="radio" name="bike-color">
+              <div class="form__bike">
+                <img class="form__bike-img" src="images/bike10.png" alt="bike">
+                <p class="form__bike-price"><span>66000р</span></p>
+              </div>
+              <div class="form__radio-style form__radio-style--grey"></div>
+            </label>
+            <label class="form__label">
+              <input class="form__input-radio" type="radio" name="bike-color" checked>
+              <div class="form__bike">
+                <img src="images/bike9.png" alt="bike" class="form__bike-img">
+                <p class="form__bike-price"><span>67800р</span></p>
+              </div>
+              <div class="form__radio-style form__radio-style--white"></div>
+            </label>
+            <label class="form__label">
+              <input class="form__input-radio" type="radio" name="bike-color">
+              <div class="form__bike">
+                <img src="images/bike11.png" alt="bike" class="form__bike-img">
+                <p class="form__bike-price"><span></span>69600р</p>
+              </div>
+              <div class="form__radio-style form__radio-style--red"></div>
+            </label>
+          </div>
+          <button class="form__button" type="submit">Заказать</button>
         </form>
       </div>
     </div>
-  </section> -->
+  </section>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a class="footer__link" href="#">политика конфеденциальности</a>
+        <div class="footer__social">
+          <a class="footer__social-link" href="social.html" target="_blank">
+            <img class="footer__social-img" src="images/instagram.svg" alt="instagram">
+          </a>
+          <a class="footer__social-link" href="social.html" target="_blank">
+            <img class="footer__social-img" src="images/facebook.svg" alt="facebook">
+          </a>
+        </div>
+        <div class="footer__contacts">
+          <a class="footer__contacts-phone" href="tel:+79998969947">
+            <img class="footer__contacts-img" src="images/phone.svg" alt="phone">
+            <span>7 999 896 9947</span>
+          </a>
+          <a class="footer__contacts-mail" href="mailto:sh.rabadanov23@gmail.com">
+            <img class="footer__contacts-img" src="images/mail.svg" alt="mail">
+            <span>sh.rabadanov23@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script.js"></script>
   <script src="slick.min.js"></script>
